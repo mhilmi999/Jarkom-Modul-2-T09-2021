@@ -208,3 +208,4 @@ lalu kita lakukan ping di Loguetown untuk mengetes dns slavenya berhasil atau ti
 Setelah itu terdapat subdomain mecha.franky.ti9.com dengan alias www.mecha.franky.ti9.com yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo
 ## Jawaban Soal 6
 ---
+
