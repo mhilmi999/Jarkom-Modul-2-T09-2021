@@ -45,10 +45,10 @@ Sri Puspita Dewi | 05111940000045
 ## Notes:<br> - Prefix IP: 10.46 <br> - [Soal Shift](https://docs.google.com/document/d/11_xDG1yHMIOAZVPksRV0VDwx8S4KIgtAMCLh3UD5-qM/edit)
 ---
 
-## Soal 1 :
+## Soal 1
 ---
 Buatlah topologi jaringan dengan detil berikut: `EniesLobby` akan dijadikan sebagai `DNS Master`, `Water7` akan dijadikan `DNS Slave`, dan `Skypie` akan digunakan sebagai `Web Server`. Terdapat 2 `Client` yaitu `Loguetown`, dan `Alabasta`. `Semua node terhubung` pada router `Foosha`, sehingga dapat mengakses internet
-## Jawaban Soal 1 : 
+## Jawaban Soal 1 
 ---
 Pertama-tama kami membuat sebuah node yang terhubung dengan internet dengan nama NAT1. Node tersebut kemudian disambungkan dengan router foosha melalui interface `nat0` menuju interface `eth0`. Selanjutnya konfigurasi IP router foosha seperti gambar berikut:
 
@@ -90,10 +90,10 @@ Kemudian agar setiap node terhubung ke router Foosha **(EniesLobby, Water7, Logu
 
 ---
 
-## Soal 2 :
+## Soal 2
 ---
 Membuat sebuah domain utama yang DNS nya di `EniesLobby` dengan url **`franky.ti9.com`** dengan alias **`www.franky.ti9.com`** pada `folder kaizoku`
-## Jawaban Soal 2 : 
+## Jawaban Soal 2
 ---
 Dalam menyelesaikan pembuatan domain utama, pertama-tama yang perlu dilakukan adalah konfigurasi pada `/etc/bind/named.conf.local` untuk pembuatan zone baru yang berisi `nama zone`, `type nya`, dan `lokasi konfigurasi db localnya`. Detilnya seperti gambar berikut:
 
@@ -122,5 +122,16 @@ Langkah selanjutnya yaitu membuat alias atau **`CNAME`** pada `www.franky.ti9.co
 Setelah semuanya sudah maka lakukan `restart bind` kembali
 
 ![Foto](./img/no2/restartbind9cname.jpg)
+
+---
+
+## Soal 3
+---
+Membuat sebuah domain utama yang DNS nya di `EniesLobby` dengan url **`franky.ti9.com`** dengan alias **`www.franky.ti9.com`** pada `folder kaizoku`
+## Jawaban Soal 3
+---
+Dalam menyelesaikan pembuatan domain utama, pertama-tama yang perlu dilakukan adalah konfigurasi pada `/etc/bind/named.conf.local` untuk pembuatan zone baru yang berisi `nama zone`, `type nya`, dan `lokasi konfigurasi db localnya`. Detilnya seperti gambar berikut:
+
+![Foto](./img/no2/konfigurasizonefrankyti9.jpg)
 
 ---
