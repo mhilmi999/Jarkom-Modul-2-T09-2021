@@ -197,7 +197,7 @@ Pertama kita harus ke  **EniesLobby** dahulu dimana kita menambahkan `notify, al
 
 Kemudian kita `restart dan stop`  kan di EniesLobby  agar hanya Water7nya saja yang aktif dengan mengetik ` service bind9 restart` dan `service bind9 stop`
 
-![Foto](./ img/no.%205/5.3.EniesLobby.jpg)
+![Foto](./img/no.%205/5.3.EniesLobby.jpg)
 
 Selanjutnya kita ke  **Water7**  dimana kita menkonfigurasi zone Dns Slavenya di `/etc/bind/named.conf.local` dengan type slave dan memasukan IP yang menjadi masternya yaitu IP EniesLobby `[10.46.2.2]` lalu kita lakukan restart ` service bind9 restart`
 
