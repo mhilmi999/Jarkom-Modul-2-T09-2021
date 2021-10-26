@@ -61,30 +61,30 @@ Selanjutnya lengkapi pembuatan topologi dengan menambahkan` node ethernet switch
 <br>
 
 Kemudian setting network dari masing-masing node ubuntu dengan fitur Edit network configuration seperti berikut:
-- Louguetown (Client)
+- Louguetown (Client) \
 ![Foto](./img/no1/loguetownconfig.jpg)
 <br>
 
-- Alabasta (Client)
+- Alabasta (Client) \
 ![Foto](./img/no1/alabastaconfig.jpg)
 <br>
 
-- EniesLobby (DNS Master)
+- EniesLobby (DNS Master) \
 ![Foto](./img/no1/enieslobbyconfig.jpg)
 <br>
 
-- Water7 (DNS Slave)
+- Water7 (DNS Slave) \
 ![Foto](./img/no1/water7config.jpg)
 <br>
 
-- Skypie (Web Server)
+- Skypie (Web Server) \
 ![Foto](./img/no1/skypieconfig.jpg)
 <br>
 
 Lalu `restart` semua node dan ketikan pada router foosha `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.46.0.0/16` .
 Kemudian agar setiap node terhubung ke router Foosha **(EniesLobby, Water7, Loguetown, dan Alabasta)**, maka diperlukan untuk `echo 'nameserver 192.168.122.1' > /etc/resolv.conf` yang diletakkan pada `/root/script.sh` . Berikut merupakan salah satu contoh pada `EniesLobby`:
 
-- EniesLobby (DNS Master)
+- EniesLobby (DNS Master) \
 ![Foto](./img/no1/enieslobbyconnectfoosha.jpg)
 <br>
 
