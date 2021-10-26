@@ -187,3 +187,9 @@ Setelah semuanya sudah maka lakukan `restart bind` kembali
 Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Water7 sebagai DNS Slave untuk domain utama
 ## Jawaban Soal 5
 ---
+
+## Soal 6
+---
+Setelah itu terdapat subdomain mecha.franky.ti9.com dengan alias www.mecha.franky.ti9.com yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo
+## Jawaban Soal 6
+---
