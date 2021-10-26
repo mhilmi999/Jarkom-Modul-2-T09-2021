@@ -189,7 +189,7 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
 ---
 Pertama kita harus ke  **EniesLobby** dahulu dimana kita menambahkan `notify, also-notify  (dengan IP Water7 [10.46.2.3]) dan allow-transfer (dengan IP Water7 [10.46.2.3])`  di folder kazoku pada `/etc/bind/named.conf.local`
 
-![Foto](./img/no. 5/5.1.EniesLobby.jpeg)
+![Foto](./img/no.%205/5.1.EniesLobby.jpeg)
 ![Foto](./img/no.5/5.2.EniesLobby.jpeg)
 
 
