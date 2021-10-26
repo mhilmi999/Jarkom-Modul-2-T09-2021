@@ -42,7 +42,7 @@ Sri Puspita Dewi | 05111940000045
 - [Soal 17](#soal-17)
 	- [Jawaban](#jawaban-soal-17)
 
-## Notes: Prefix IP: 10.46
+## Notes:<br> - Prefix IP: 10.46 <br> - [Soal Shift](https://docs.google.com/document/d/11_xDG1yHMIOAZVPksRV0VDwx8S4KIgtAMCLh3UD5-qM/edit)
 ---
 
 ## Soal 1 :
@@ -87,5 +87,40 @@ Kemudian agar setiap node terhubung ke router Foosha **(EniesLobby, Water7, Logu
 - EniesLobby (DNS Master) \
 ![Foto](./img/no1/enieslobbyconnectfoosha.jpg)
 <br>
+
+---
+
+## Soal 2 :
+---
+Membuat sebuah domain utama yang DNS nya di `EniesLobby` dengan url **`franky.ti9.com`** dengan alias **`www.franky.ti9.com`** pada `folder kaizoku`
+## Jawaban Soal 2 : 
+---
+Dalam menyelesaikan pembuatan domain utama, pertama-tama yang perlu dilakukan adalah konfigurasi pada `/etc/bind/named.conf.local` untuk pembuatan zone baru yang berisi `nama zone`, `type nya`, dan `lokasi konfigurasi db localnya`. Detilnya seperti gambar berikut:
+
+![Foto](./img/no2/konfigurasizonefrankyti9.jpg)
+
+Lalu kami membuat sebuah `direktori baru` yang mana akan menyimpan konfigurasi db local yang bernama `kaizoku`. Detilnya seperti gambar berikut:
+
+![Foto](./img/no2/buatdirektorikaizoku.jpg)
+
+Kemudian membuat db local untuk configurasi dari `franky.ti9.com` yang menyalin dari template `db.local`
+
+![Foto](./img/no2/buatdblocalfrankyti9.jpg)
+
+Selanjutnya kami melakukan konfigurasi perubahan berupa dari `localhost` menjadi `franky.ti9.com`serta mengarahkannya menuju ke IP dari `EniesLobby` yaitu `10.46.2.2`
+
+![Foto](./img/no2/konfigurasidblocalfrankyti9.jpg)
+
+Setelah sudah ter-konfigurasi `file db.local` untuk `franky.ti9.com` maka `restart` dari `bind9`
+
+![Foto](./img/no2/restartbind9.jpg)
+
+Langkah selanjutnya yaitu membuat alias atau **`CNAME`** pada `www.franky.ti9.com` dengan menambahkan pada `file db.local` untuk `franky.ti9.com` yang bernama `franky.ti9.com`pada folder `kaizoku`. Tambahan yang dimaksud berupa <br>`www     IN      CNAME   franky.ti9.com.`
+
+![Foto](./img/no2/aliascnamefrankyti9.jpg)
+
+Setelah semuanya sudah maka lakukan `restart bind` kembali
+
+![Foto](./img/no2/restartbind9cname.jpg)
 
 ---
