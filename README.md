@@ -189,17 +189,17 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
 ---
 Pertama kita harus ke  **EniesLobby** dahulu dimana kita menambahkan `notify, also-notify  (dengan IP Water7 [10.46.2.3]) dan allow-transfer (dengan IP Water7 [10.46.2.3])`  di folder kazoku pada `/etc/bind/named.conf.local`
 
-![Foto](./img/no. 5/5.1.EniesLobby.jpeg)
-![Foto](./img/no. 5/5.2.EniesLobby.jpeg)
+![Foto](./img/no.5/5.1.EniesLobby.jpeg)
+![Foto](./img/no.5/5.2.EniesLobby.jpeg)
 
 Kemudian kita `restart dan stop`  kan di EniesLobby  agar hanya Water7nya saja yang aktif dengan mengetik ` service bind9 restart` dan `service bind9 stop`
-![Foto](./ img/no. 5/5.3.EniesLobby.jpg)
+![Foto](./ img/no.5/5.3.EniesLobby.jpg)
 
 Selanjutnya kita ke  **Water7**  dimana kita menkonfigurasi zone Dns Slavenya di `/etc/bind/named.conf.local` dengan type slave dan memasukan IP yang menjadi masternya yaitu IP EniesLobby `[10.46.2.2]` lalu kita lakukan restart ` service bind9 restart`
-![Foto](./img/no. 5/5.1.Water7.jpeg)
+![Foto](./img/no.5/5.1.Water7.jpeg)
 
 lalu kita lakukan ping di Loguetown untuk mengetes dns slavenya berhasil atau tidak dengan mengetik `ping franky.ti9.com`
-![Foto](./img/no. 5/5.2.Loguetown.jpeg)
+![Foto](./img/no.5/5.2.Loguetown.jpeg)
 
 ---
 
