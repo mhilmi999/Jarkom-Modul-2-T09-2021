@@ -127,11 +127,32 @@ Setelah semuanya sudah maka lakukan `restart bind` kembali
 
 ## Soal 3
 ---
-Membuat sebuah domain utama yang DNS nya di `EniesLobby` dengan url **`franky.ti9.com`** dengan alias **`www.franky.ti9.com`** pada `folder kaizoku`
+Membuat subdomain `super.franky.ti9.com` dengan alias `CNAME` pada `www.super.franky.ti9.com` pada DNS master `EniesLobby` yang mengarah ke IP Skypie `10.46.2.4`
 ## Jawaban Soal 3
 ---
-Dalam menyelesaikan pembuatan domain utama, pertama-tama yang perlu dilakukan adalah konfigurasi pada `/etc/bind/named.conf.local` untuk pembuatan zone baru yang berisi `nama zone`, `type nya`, dan `lokasi konfigurasi db localnya`. Detilnya seperti gambar berikut:
+Dalam menyelesaikan pembuatan subdomain `super.franky.ti9.com`, kami tinggal menambahkan <br>`super   IN      A       10.46.2.4; IP Skypie`<br>
+pada file `/etc/bind/kaizoku/franky.ti9.com`
 
-![Foto](./img/no2/konfigurasizonefrankyti9.jpg)
+![Foto](./img/no3/subdomaindblocalsuperfranky.jpg)
+
+Lalu `restart bind9`
+
+![Foto](./img/no3/bindrestart.jpg)
+
+Kemudian menambahkan `zone baru` untuk `super.franky.ti9.com` untuk membuat alias `www.super.franky.ti9.com` pada file `/etc/bind/named.conf.local`
+
+![Foto](./img/no3/zonealiaswwwsuperfranky.jpg)
+
+Selanjutnya salin file `db.local` menjadi sebuah file baru dengan nama `super.franky.ti9.com`.
+
+![Foto](./img/no3/cpdblocalwwwsuperfranky.jpg)
+
+Lalu konfigurasi `db.local` untuk alias `www.super.franky.ti9.com` dengan menambahkan `www     IN      CNAME      super.franky.ti9.com.` .
+
+![Foto](./img/no3/dblocalconfigwwwsuperfranky.jpg)
+
+Lalu `restart bind9`
+
+![Foto](./img/no3/bindrestart.jpg)
 
 ---
