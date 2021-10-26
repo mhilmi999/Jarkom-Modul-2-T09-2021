@@ -156,3 +156,28 @@ Lalu `restart bind9`
 ![Foto](./img/no3/bindrestart.jpg)
 
 ---
+
+## Soal 4
+---
+Buatlah reverse dns (Record PTR) dari domain utama `franky.ti9.com`
+## Jawaban Soal 4
+---
+Dalam menyelesaikan pembuatan reverse dns `(Record PTR)` kami pertama-tama menginisialisasi sebuah zone baru pada `/etc/bind/kaizoku/2.46.10.in-addr.arpa` dengan detil sebagai berikut
+
+![Foto](./img/no4/tambahzoneptr.jpg)
+
+Selanjutnya pembuatan file `db.local` untuk reverse dns dari `2.46.10.in-addr.arpa` dengan cara menyalin `template db.local` dari bind
+
+![Foto](./img/no4/cpdblocalreversedns.jpg)
+
+Kemudian konfigurasi `db.local` pada `reverse dns`dengan menambahkan dua hal ini:<br>
+`2.46.10.in-addr.arpa.       IN      NS      franky.ti9.com.`<br>
+`4       IN      PTR       franky.ti9.com.` 
+
+![Foto](./img/no4/reversednsdblocal.jpg)
+
+Setelah semuanya sudah maka lakukan `restart bind` kembali
+
+![Foto](./img/no4/servicebindrestart.jpg)
+
+---
