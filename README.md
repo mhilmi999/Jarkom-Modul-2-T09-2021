@@ -181,3 +181,9 @@ Setelah semuanya sudah maka lakukan `restart bind` kembali
 ![Foto](./img/no4/servicebindrestart.jpg)
 
 ---
+
+## Soal 5
+---
+Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Water7 sebagai DNS Slave untuk domain utama
+## Jawaban Soal 5
+---
