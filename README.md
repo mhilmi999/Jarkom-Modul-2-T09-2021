@@ -193,7 +193,7 @@ Pertama kita harus ke  **EniesLobby** dahulu dimana kita menambahkan `notify, al
 ![Foto](./img/no.5/5.2.EniesLobby.jpeg)
 
 Kemudian kita `restart dan stop`  kan di EniesLobby  agar hanya Water7nya saja yang aktif dengan mengetik ` service bind9 restart` dan `service bind9 stop`
-![Foto](./ img/no. 5/5.3.EniesLobby.jpg)
+![Foto](./ img/no.5/5.3.EniesLobby.jpg)
 
 Selanjutnya kita ke  **Water7**  dimana kita menkonfigurasi zone Dns Slavenya di `/etc/bind/named.conf.local` dengan type slave dan memasukan IP yang menjadi masternya yaitu IP EniesLobby `[10.46.2.2]` lalu kita lakukan restart ` service bind9 restart`
 ![Foto](./img/no.5/5.1.Water7.jpeg)
@@ -213,24 +213,31 @@ Pertama kita harus ke **EniesLobby** dahulu dimana kita akan mengkonfigurasikan 
 ![Foto](./img/no.6/6.1.enieslobby.jpeg)
 
 lalu kita melakukan konfigurasi lagi di `/etc/bind/named.conf.options`
+
 ![Foto](./img/no.6/6.2.enieslobby.jpeg)
 
 Kemudian kita `restart `  kan di EniesLobby,  ` service bind9 restart` 
+
 ![Foto](./img/no.6/6.3.enieslobby.jpeg)
 
 Selanjutnya kita ke **Water7** dimana kita menkonfigurasikan pada /etc/bind/named.conf.options`
+
 ![Foto](./img/no.6/6.1.water7.jpeg)
 
 kita mengubah konfigurasinya di  `/etc/bind/named.conf.local`
+
 ![Foto](./img/no.6/6.2.water7.jpeg)
 
 lalu kita membuat direktory sunnygo dengan `mkdir /etc/bind/sunnygo` dan copy db localnya ke sunnygo di mecha.franky.ti9.com dengan `cp //etc/bind/db.local` 
+
 ![Foto](./img/no.6/6.3.water7.jpeg)
 
 di db local yg sudah di copy kita konfigurasikan 
+
 ![Foto](./img/no.6/6.4.water7.jpeg)
 
 dan terakhir kita restar dengan `service bind9 restart`
+
 ![Foto](./img/no.6/6.5.water7.jpeg)
 
 
