@@ -187,7 +187,7 @@ Setelah semuanya sudah maka lakukan `restart bind` kembali
 Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Water7 sebagai DNS Slave untuk domain utama
 ## Jawaban Soal 5
 ---
-Pertama kita harus ke EniesLobby dahulu dimana kita menambahkan `notify, also-notify  (dengan IP Water7 [10.46.2.3]) dan allow-transfer (dengan IP Water7 [10.46.2.3])`  di folder kazoku pada `/etc/bind/named.conf.local`
+Pertama kita harus ke  **EniesLobby** dahulu dimana kita menambahkan `notify, also-notify  (dengan IP Water7 [10.46.2.3]) dan allow-transfer (dengan IP Water7 [10.46.2.3])`  di folder kazoku pada `/etc/bind/named.conf.local`
 
 ![Foto](./img/no.5/5.1.EniesLobby.jpeg)
 ![Foto](./img/no.5/5.2.EniesLobby.jpeg)
@@ -195,7 +195,7 @@ Pertama kita harus ke EniesLobby dahulu dimana kita menambahkan `notify, also-no
 Kemudian kita `restart dan stop`  kan di EniesLobby  agar hanya Water7nya saja yang aktif dengan mengetik ` service bind9 restart` dan `service bind9 stop`
 ![Foto](./ img/no. 5/5.3.EniesLobby.jpg)
 
-Selanjutnya kita ke Water7 dimana kita menkonfigurasi zone Dns Slavenya di `/etc/bind/named.conf.local` dengan type slave dan memasukan IP yang menjadi masternya yaitu IP EniesLobby `[10.46.2.2]` lalu kita lakukan restart ` service bind9 restart`
+Selanjutnya kita ke  **Water7**  dimana kita menkonfigurasi zone Dns Slavenya di `/etc/bind/named.conf.local` dengan type slave dan memasukan IP yang menjadi masternya yaitu IP EniesLobby `[10.46.2.2]` lalu kita lakukan restart ` service bind9 restart`
 ![Foto](./img/no.5/5.1.Water7.jpeg)
 
 lalu kita lakukan ping di Loguetown untuk mengetes dns slavenya berhasil atau tidak dengan mengetik `ping franky.ti9.com`
@@ -208,4 +208,37 @@ lalu kita lakukan ping di Loguetown untuk mengetes dns slavenya berhasil atau ti
 Setelah itu terdapat subdomain mecha.franky.ti9.com dengan alias www.mecha.franky.ti9.com yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo
 ## Jawaban Soal 6
 ---
+Pertama kita harus ke **EniesLobby** dahulu dimana kita akan mengkonfigurasikan franky.ti9.com di `/etc/bind/kazoku/franky.ti9.com`
+
+![Foto](./img/no.6/6.1.enieslobby.jpeg)
+
+lalu kita melakukan konfigurasi lagi di `/etc/bind/named.conf.options`
+![Foto](./img/no.6/6.2.enieslobby.jpeg)
+
+Kemudian kita `restart `  kan di EniesLobby,  ` service bind9 restart` 
+![Foto](./img/no.6/6.3.enieslobby.jpeg)
+
+Selanjutnya kita ke **Water7** dimana kita menkonfigurasikan pada /etc/bind/named.conf.options`
+![Foto](./img/no.6/6.1.water7.jpeg)
+
+kita mengubah konfigurasinya di  `/etc/bind/named.conf.local`
+![Foto](./img/no.6/6.2.water7.jpeg)
+
+lalu kita membuat direktory sunnygo dengan `mkdir /etc/bind/sunnygo` dan copy db localnya ke sunnygo di mecha.franky.ti9.com dengan `cp //etc/bind/db.local` 
+![Foto](./img/no.6/6.3.water7.jpeg)
+
+di db local yg sudah di copy kita konfigurasikan 
+![Foto](./img/no.6/6.4.water7.jpeg)
+
+dan terakhir kita restar dengan `service bind9 restart`
+![Foto](./img/no.6/6.5.water7.jpeg)
+
+
+Pindah ke Loguetown untuk mengetestnya  dengan melakukan `ping mecha.franky.ti9.com` lalu ping lagi `ping www.mecha.franky.ti9.com`
+![Foto](./img/no.6/6.1.loguetown.jpeg)
+
+![Foto](./img/no.6/6.2.loguetown.jpeg)
+
+---
+
 
