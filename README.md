@@ -226,7 +226,7 @@ Kemudian kita `restart `  kan di EniesLobby,  ` service bind9 restart`
 
 ![Foto](./img/no.6/6.3.enieslobby.jpeg)
 
-Selanjutnya kita ke **Water7** dimana kita menkonfigurasikan pada /etc/bind/named.conf.options`
+Selanjutnya kita ke **Water7** dimana kita menkonfigurasikan pada `etc/bind/named.conf.options`
 
 ![Foto](./img/no.6/6.1.water7.jpeg)
 
@@ -247,7 +247,7 @@ dan terakhir kita restar dengan `service bind9 restart`
 ![Foto](./img/no.6/6.5.water7.jpeg)
 
 
-Pindah ke Loguetown untuk mengetestnya  dengan melakukan `ping mecha.franky.ti9.com` lalu ping lagi `ping www.mecha.franky.ti9.com`
+Pindah ke  **Loguetown** untuk mengetestnya  dengan melakukan `ping mecha.franky.ti9.com` lalu ping lagi `ping www.mecha.franky.ti9.com`
 ![Foto](./img/no.6/6.1.loguetown.jpeg)
 
 ![Foto](./img/no.6/6.2.loguetown.jpeg)
@@ -460,7 +460,19 @@ Tidak hanya itu, Luffy juga menyiapkan `error file 404.html` pada folder `/error
 
 ## Jawaban Soal 12
 ---
+Pertama kita ke **Skype** melakukan pengaturan di `/etc/apache2/sites-available/super.franky.ti9.com.conf` pada virtualhostnya, yang mana ditambahin ` ErrorDocument 404 /error/404.html`
 
+![Foto](./img/no.12/12.1.skype.jpeg)
+
+lalu lakukan restart `service apache2 restart`
+
+![Foto](./img/no.12/12.2.skype.jpeg)
+
+Kita pindah ke **Alabasta**  untuk melakukan pengecekkan atau test `lynx www.super.franky.ti9.com/publi`
+
+![Foto](./img/no.12/12.1.alabasta.jpeg)
+![Foto](./img/no.12/12.2.alabasta.jpeg)
+![Foto](./img/no.12/12.3.alabasta.jpeg)
 
 
 ---
