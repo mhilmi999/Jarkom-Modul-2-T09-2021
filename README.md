@@ -471,7 +471,9 @@ lalu lakukan restart `service apache2 restart`
 Kita pindah ke **Alabasta**  untuk melakukan pengecekkan atau test `lynx www.super.franky.ti9.com/publi`
 
 ![Foto](./img/no.12/12.1.alabasta.jpeg)
+
 ![Foto](./img/no.12/12.2.alabasta.jpeg)
+
 ![Foto](./img/no.12/12.3.alabasta.jpeg)
 
 
@@ -484,7 +486,17 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
 
 ## Jawaban Soal 13
 ---
+Pertama kita ke **Skype** melakukan pengaturan di `/etc/apache2/sites-available/super.franky.ti9.com.conf` pada virtualhostnya, yang mana ditambahin ` Alias "/js" "/var/www/super.franky.ti9.com/public/js"`  lalu lakukan restart `service apache2 restart`
 
+![Foto](./img/no.13/13.1.skype.jpeg)
+
+Kita pindah ke **Alabasta**  untuk melakukan pengecekkan atau test `www.super.franky.ti9.com`
+
+![Foto](./img/no.13/13.1.alabasta.jpeg)
+
+![Foto](./img/no.13/13.2.alabasta.jpeg)
+
+![Foto](./img/no.13/13.3.alabasta.jpeg)
 
 
 ---
