@@ -575,7 +575,9 @@ Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
 Berikut Hasil Uji Coba soal nomor 16 
 
 ![Foto](./img/no16/uji161.jpg)
+
 ![Foto](./img/no16/uji162.jpg)
+
 ![Foto](./img/no16/uji163.jpg)
 
 ---
@@ -601,8 +603,11 @@ Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
 Berikut Hasil Uji Coba soal nomor 16 
 
 ![Foto](./img/no17/uji1.jpg)
+
 ![Foto](./img/no17/uji2.jpg)
+
 ![Foto](./img/no17/uji3.jpg)
+
 ![Foto](./img/no17/uji4.jpg)
 
 ---
