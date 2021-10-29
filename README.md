@@ -266,32 +266,32 @@ Pertama akan dibuat dulu sebuah subdomain bernama `general.mecha.franky.ti9.com`
 
 Berikut Konfigurasi db.local :
 
-![Foto](./img/no7/a)
+![Foto](./img/no7/a.png)
 
 Setelah itu akan dijalankan bind restart untuk memastikan tidak ada yang salah dalam script yang kita tambahkan seperti gambar dibawah :
 
-![Foto](./img/no7/b)
+![Foto](./img/no7/b.png)
 
 Kemudian selanjutnya dilanjutkan dengan pembuatan zone baru bernama `general.mecha.franky.ti9.com` menggunakan echo seperti pada contoh dibawah
 
-![Foto](./img/no7/c)
+![Foto](./img/no7/c.png)
 
 Kemudian kita akan meng-copy db.local yang sudah kita buat sebelumnya ke file `www.general.mecha.franky.ti9.com` yang terletak di `etc/bind/sunnygo/general.mecha.franky.ti9.com` seperti pada gambar dibawah
 
-![Foto](./img/no7/d)
+![Foto](./img/no7/d.png)
 
 Setelah selesai mengcopy db.local, dilanjutkan dengan mengkonfigurasi db.local tersebut sesuai yang tertera pada gambar
 
-![Foto](./img/no7/e)
+![Foto](./img/no7/e.png)
 
 Terakhir, untuk memastikan semua proses yang telah dimasukkan kedalam `script.sh` sudah benar, kita akan melakukan restart bind9 kembali seperti pada gambar dibawah :
 
-![Foto](./img/no7/f)
+![Foto](./img/no7/f.png)
 
 Untuk mengetes apakah subdomain yang dibuat telah berfungsi, kita menggunakan command berupa `ping general.mecha.franky.ti9.com` dan
 `ping www.general.mecha.franky.ti9.com` pada console `Lougetown` hasil nya seperti pada contoh gambar dibawah :
 
-![Foto](./img/no7/g)
+![Foto](./img/no7/g.png)
 
 ---
 
@@ -306,31 +306,31 @@ Semua langkah beriku dilakukan pada `Skypie`
 
 Langkah pertama dalam pengerjaan nomor 8 adalah mengupdate linux menggunakan command `apt-get update` seperti gambar dibawah
 
-![Foto](./img/no8/a)
+![Foto](./img/no8/a.png)
 
 Dilanjutkan dengan meng-install apache2 menggunakan command `apt-get install apache2` setelah berhasil di-install akan langsung di-start menggunakan command `service apache2 start` 
 
-![Foto](./img/no8/b)
+![Foto](./img/no8/b.png)
 
 Langkah selanjutnya adalah memulai instalasi php menggunakan command `apt-get install php` dan mengecek version php yang terinstall dengan `php -v`
 
-![Foto](./img/no8/c)
+![Foto](./img/no8/c.png)
 
 Selanjutnya disini akan memulai insialisasi `DocumentRoot` pada `/var/www/franky.ti9.com` dengan cara :
 
-![Foto](./img/no8/d)
+![Foto](./img/no8/d.png)
 
 Kemudian akan dimulai pengaktifan konfigurasi dari franky.ti9.com dengan command `a2ensite franky.ti9.com.comf`
 
-![Foto](./img/no8/e)
+![Foto](./img/no8/e.png)
 
 Selanjutnya akan dibuat sebuah direktori `franky` pada `/var/www` menggunakan command `mkdir`
 
-![Foto](./img/no8/f)
+![Foto](./img/no8/f.png)
 
 Langkah erakhir, untuk memastikan semua proses yang telah dimasukkan kedalam `script.sh` sudah benar, kita akan melakukan restart apache2
 
-![Foto](./img/no8/g)
+![Foto](./img/no8/g.png)
 
 ```txt
 INI PENGUJIANNNYA BELOM DIMASUKIN AKU BINGUNG KATA" SAMA NGUJINYA GIMANA HELPP YAA~~
@@ -348,43 +348,43 @@ Semua langkah berikut dilakukan pada `Skypie`
 
 Langkah awal dalam pengerjaan soal nomor 9 adalah men-download `unzip` dengan command `apt-get install unzip`
 
-![Foto](./img/no9/a)
+![Foto](./img/no9/a.png)
 
 Selanjutnya kita juga perlu untuk mendownload `wget` agar file yang diperlukan dapat di-download.
 
-![Foto](./img/no9/b)
+![Foto](./img/no9/b.png)
 
 Kemudian disini akan dimulai proses untuk men-download requirment yang diperlukan yaitu `franky.zip` menggunakan `wget` yang tadi sudah di-download
 
-![Foto](./img/no9/c)
+![Foto](./img/no9/c.png)
 
 Kemudian file zip yang tadi berhasil di-download akan di unzip dengan command `unzip -j /root/franky.zip -d /var/www/franky.ti9.com` 
 
-![Foto](./img/no9/d)
+![Foto](./img/no9/d.png)
 
 Karena file zip yang tadi sudah tidak dibutuhkan kita akan menghapus file tersebut dengan `rm /root/franky.zip`
 
-![Foto](./img/no9/e)
+![Foto](./img/no9/e.png)
 
 Kemudian selanjutnya kita akan mengaktifkan modul `rewrite` menggunakan `a2emond rewrite`
 
-![Foto](./img/no9/f)
+![Foto](./img/no9/f.png)
 
 Kemudian selanjutnya akan dilakukan restart apache2
 
-![Foto](./img/no9/g)
+![Foto](./img/no9/g.png)
 
 Setelah itu kita akan menghapus index.php dengan menambahkan `htacces` seperti pada gambar dibawah 
 
-![Foto](./img/no9/h)
+![Foto](./img/no9/h.png)
 
 Langkah selanjutnya proses konfigurasi pada sites-available
 
-![Foto](./img/no9/i)
+![Foto](./img/no9/i.png)
 
 Dan terakhir akan dilakukan restart apache2
 
-![Foto](./img/no9/j)
+![Foto](./img/no9/j.png)
 
 ```txt
 INI BAGIAN PENGUJIAN~~
@@ -402,19 +402,19 @@ Semua langkah berikut dilakukan pada `Skypie`
 
 Langkah awal dalam pengerjaan soal nomor 10 adalah meng-inisialisasi `DocumentRoot` pada `/var/www/super.franky.ti9.com`
 
-![Foto](./img/no10/a)
+![Foto](./img/no10/a.png)
 
 Selanjutnya adalah mengaktifkan konfigurasi dari `franky.ti9.com` menggunakan `a2ensite`
 
-![Foto](./img/no10/b)
+![Foto](./img/no10/b.png)
 
 Dilanjutkan dengan pembuatan direktori franky pada `/var/www/`
 
-![Foto](./img/no10/c)
+![Foto](./img/no10/c.png)
 
 Langkah terakhir adalah merestart apache2
 
-![Foto](./img/no10/d)
+![Foto](./img/no10/d.png)
 
 INI TEMPAT PENGUJIANN~~
 
@@ -431,23 +431,23 @@ Semua langkah berikut dilakukan pada `Skypie`
 
 Hal pertama yang dilakukan adalah men-download file zip yang dibutuhkan yaitu `super.franky.zip` seperti pada gambar dibawah
 
-![Foto](./img/no11/a)
+![Foto](./img/no11/a.png)
 
 Selanjutnya file zip yang berhasil di-download akan memulai proses unzip dengan command seperti dibawah
 
-![Foto](./img/no11/b)
+![Foto](./img/no11/b.png)
 
 Karena file zip yang tadi sudah berhasil di unzip, maka kita tidak membutuhkannya lagi, jadi akan dihapus dengan perintah `rm`
 
-![Foto](./img/no11/c)
+![Foto](./img/no11/c.png)
 
 Selanjutnya kita akan memindahkan konten yang telah di unzip ke path `/var/www/super.franky.ti9.com/`
 
-![Foto](./img/no11/d)
+![Foto](./img/no11/d.png)
 
 Yang terakhir adalah menghapus folder `super.franky` yang sudah tidak lagi dibutuhkan
 
-![Foto](./img/no11/e)
+![Foto](./img/no11/e.png)
 
 ```txt
 INI TEMPAT PENGUJIANNN~~
