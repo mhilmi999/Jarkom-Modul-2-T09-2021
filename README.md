@@ -332,9 +332,7 @@ Langkah erakhir, untuk memastikan semua proses yang telah dimasukkan kedalam `sc
 
 ![Foto](./img/no8/g.png)
 
-```txt
-INI PENGUJIANNNYA BELOM DIMASUKIN AKU BINGUNG KATA" SAMA NGUJINYA GIMANA HELPP YAA~~
-```
+
 ---
 
 ## Soal 9
@@ -386,9 +384,10 @@ Dan terakhir akan dilakukan restart apache2
 
 ![Foto](./img/no9/j.png)
 
-```txt
-INI BAGIAN PENGUJIAN~~
-```
+Berikut Hasil Uji Coba soal nomor 9
+
+![Foto](./img/no9/uji91.jpg)
+![Foto](./img/no9/uji92.jpg)
 ---
 
 ## Soal 10
@@ -415,8 +414,6 @@ Dilanjutkan dengan pembuatan direktori franky pada `/var/www/`
 Langkah terakhir adalah merestart apache2
 
 ![Foto](./img/no10/d.png)
-
-INI TEMPAT PENGUJIANN~~
 
 ---
 
@@ -550,6 +547,10 @@ Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
 
 ![Foto](./img/no.12/12.2.skype.jpeg)
 
+Berikut Hasil Uji Coba soal nomor 15 
+
+![Foto](./img/no15/uji151.jpg)
+
 
 ---
 
@@ -571,6 +572,12 @@ Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
 
 ![Foto](./img/no.12/12.2.skype.jpeg)
 
+Berikut Hasil Uji Coba soal nomor 16 
+
+![Foto](./img/no16/uji161.jpg)
+![Foto](./img/no16/uji162.jpg)
+![Foto](./img/no16/uji163.jpg)
+
 ---
 
 ## Soal 17
@@ -590,5 +597,12 @@ Selanjutnya adalah pembuatan `file .htaccess` pada path `/var/www/super.franky.t
 Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
 
 ![Foto](./img/no.12/12.2.skype.jpeg)
+
+Berikut Hasil Uji Coba soal nomor 16 
+
+![Foto](./img/no17/uji1.jpg)
+![Foto](./img/no17/uji2.jpg)
+![Foto](./img/no17/uji3.jpg)
+![Foto](./img/no17/uji4.jpg)
 
 ---
