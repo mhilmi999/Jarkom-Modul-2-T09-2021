@@ -507,8 +507,25 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.ti9.com` hanya bisa diakse
 
 ## Jawaban Soal 14
 ---
+Dalam menyelesaikan hal ini, pertama-tama kami membuat `VirtualHost` baru dengan port `15000` dan `15500`
 
+![Foto](./img/no14/virtualhostbaru.jpg)
 
+Selanjutnya mengaktifkan konfigurasi dengan command `a2ensite` terhadap `general.mecha.franky.ti9.com`.
+
+![Foto](./img/no14/a2ensite.jpg)
+
+lalu siapkan folder yang akan menampung assetnya yang berada pada path `/var/www/genera.mecha.franky.ti9.com`.
+
+![Foto](./img/no14/mkdirgeneralmecha.jpg)
+
+kemudian isi kan konten yang akan ditampilkan untuk `general.mecha.franky.ti9.com` yang diunduh dari `file requirement` pada soal shift. Pertama-tama unduh terlebih dahulu file yang diperlukan, proses `unzip` menuju ke `path folder` tempat penyimpanannya, dan hapus file zip yang telah diunduh tadi agar penyimpanan tidak menumpuk.
+
+![Foto](./img/no14/isikonten.jpg)
+
+Setelah semua sudah seperti biasa lakukan `restart apache2`
+
+![Foto](./img/no.12/12.2.skype.jpeg)
 
 ---
 
@@ -518,7 +535,20 @@ dengan autentikasi `username luffy` dan `password onepiece `dan file di `/var/ww
 
 ## Jawaban Soal 15
 ---
+Pada soal ini kami menyelesaikannya dengan mengaktifkan command<br> `htpasswd -b -c /etc/apache2/.htpasswd luffy onepiece`<br>
+dalam mendaftarkan autentikasinya.
 
+Setelah sudah maka konfigurasikan ulang virtualhost dari `general.mecha.franky.ti9.com.conf` dengan menambahkan akses penggunaan `.htaccess` sebagai berikut:
+
+![Foto](./img/no15/vhost.jpg)
+
+Kemudian tahap pembuatan `.htaccess` yang bertujuan untuk menggunakan `AuthType basic` yang mana untuk `file otentikasi` berada pada path `/etc/apache2/.htpasswd`
+
+![Foto](./img/no15/htaccessbasicauth.jpg)
+
+Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
+
+![Foto](./img/no.12/12.2.skype.jpeg)
 
 
 ---
@@ -529,8 +559,17 @@ Dan setiap kali mengakses IP Skypie akan dialihkan secara otomatis ke `www.frank
 
 ## Jawaban Soal 16
 ---
+Sepemahaman kami maksud dari soal adalah ketika terdapat akses menuju ke IP Skypie `10.46.2.4` maka akan `redirect` menuju `www.franky.ti9.com`. Hal ini kami selesaikan dengan cara mengubah `000-default.conf` yang mana `DocumentRoot` kami arahkan ke asset folder `/var/www.franky.ti9.com` serta juga menambahkan konfigurasi untuk mengijinkan penggunaan `.htaccess`
 
+![Foto](./img/no16/ubahfiledefault00conf.jpg)
 
+Lalu kami melakukan pembaharuan pada `.htaccess` untuk domain `www.franky.ti9.com` dengan menambahkan `RewriteBase /`, `RewriteCond %{HTTP_HOST} ^10\.46\.2.4$`, dan `RewriteRule ^(.*)$ http://franky.ti9.com/$1 [L,R=301]`
+
+![Foto](./img/no16/tambahkanhtaccess.jpg)
+
+Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
+
+![Foto](./img/no.12/12.2.skype.jpeg)
 
 ---
 
@@ -540,7 +579,16 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 
 ## Jawaban Soal 17
 ---
+Untuk soal ini kami menambahkan akses menuju `.htaccess` yang berada pada `/etc/apache2/sites-available/super.franky.ti9.com.conf` sebagai berikut:
 
+![Foto](./img/no17/akseshtaccess.jpg)
 
+Selanjutnya adalah pembuatan `file .htaccess` pada path `/var/www/super.franky.ti9.com/.htaccess` sebagai berikut:
+
+![Foto](./img/no17/buathtaccess.jpg)
+
+Setelah sudah konfigurasi seperti biasa lakukan `restart apache2`
+
+![Foto](./img/no.12/12.2.skype.jpeg)
 
 ---
